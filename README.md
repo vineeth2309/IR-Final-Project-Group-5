@@ -36,8 +36,8 @@ sudo apt-get install libignition-physics3-dev
 ##### 2. Setting up package:
 - Run the following commands in terminal
 ```
-git clone https://github.com/raghuveerbhat/WarehouseAutomation_ROS.git
-cd WarehouseAutomation_ROS
+git clone https://github.com/vineeth2309/IR-Final-Project-Group-5.git
+cd IR-Final-Project-Group-5
 catkin_make
 ```
 
@@ -52,7 +52,7 @@ roslaunch aws_robomaker_small_warehouse_world view_small_warehouse.launch
 ```
 cd ~/catkin_ws/
 source devel/setup.bash
-export TURTLEBOT3_MODEL=burger
+export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 **Note**: Now you should be able to see the robot in the gazebo which has aws small warehouse world loaded in it.
@@ -62,7 +62,7 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 cd ~/catkin_ws/
 source devel/setup.bash
-export TURTLEBOT3_MODEL=burger
+export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 **Note**: Press keys W,A,X,D robot will do the movements and S key to stop the action.
@@ -71,7 +71,7 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 The map for the warehouse can be built by moving the robot around the environment. Run the following commands:
 ```
 cd ~/catkin_ws/
-export TURTLEBOT3_MODEL=burger
+export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_slam turtlebot3_slam.launch
 ```
 The map can be saved by executing the following commands in terminal
@@ -93,12 +93,5 @@ export GAZEBO_MODEL_PATH= Here add the path to directory"gazebo_aruco_box-master
 roslaunch pf_localisation main.launch
 ```
 
-#### 9. TO DO
-- Add Ground Truth poses
-- Tune parameters for localization
-- Add exploration package for mapping
-- Tune rates for move base
-- Clean and comment code
-- Add config file
-- Add aruco markers to gazebo world
-- Add package for aruco detection and pose estimation, as well as localization using estimated poses
+##### 9. To Do
+- Add local planner for obstacle avoidance
